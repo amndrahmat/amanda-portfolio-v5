@@ -1,17 +1,29 @@
 import React from "react";
 import "./experience.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { TypeAnimation } from "react-type-animation";
 
 const Experience = () => {
   return (
     <section id="experience">
-      <h5>The skills I have</h5>
-      <h2>My experience</h2>
+      <TypeAnimation
+        sequence={["The", 2000, "The skills", 2000, "The skills I have", 2000]}
+        wrapper="h5"
+        cursor={false}
+        repeat={Infinity}
+      />
+
+      <TypeAnimation
+        sequence={["My", 2000, "My Experience", 2000]}
+        wrapper="h2"
+        cursor={false}
+        repeat={Infinity}
+      />
       <div className="container experience_container">
         <div className="experience_frontend">
           <h2>Frontend Development</h2>
           <div className="experience_content">
-          <article className="experience_details">
+            <article className="experience_details">
               <BsPatchCheckFill className="experience_details-icon" />
               <div>
                 <h4>React Js</h4>
@@ -25,7 +37,7 @@ const Experience = () => {
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
-           
+
             <article className="experience_details">
               <BsPatchCheckFill className="experience_details-icon" />
               <div>
@@ -61,7 +73,7 @@ const Experience = () => {
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
-           
+
             <article className="experience_details">
               <BsPatchCheckFill className="experience_details-icon" />
               <div>
@@ -71,8 +83,6 @@ const Experience = () => {
             </article>
           </div>
         </div>
-
-        {/* END OF FRONTEND */}
 
         <div className="experience_backend">
           <h2>Backend Development</h2>

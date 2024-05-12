@@ -3,16 +3,11 @@ import "./certifications.css";
 import dicoding from "../../assets/dicoding-logo.jpeg";
 import skillAcademy from "../../assets/skill-academy-logo.png";
 import codepolitan from "../../assets/codepolitan.jpg";
-
-// import required modules
 import { Pagination } from "swiper";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { TypeAnimation } from "react-type-animation";
 
 const data = [
   {
@@ -82,8 +77,33 @@ const data = [
 const Certifications = () => {
   return (
     <section id="certification">
-      <h5>Certification that I have taken</h5>
-      <h2>Certifications</h2>
+      <TypeAnimation
+          sequence={[
+            "Certification",
+            2000,
+            "Certification that",
+            2000,
+            "Certification that I have",
+            2000,
+            "Certification that I have taken",
+            2000,
+          ]}
+          wrapper="h5"
+          cursor={false}
+          repeat={Infinity}
+        />
+
+        <TypeAnimation
+          sequence={[
+            "My",
+            2000,
+            "My Certifications",
+            2000,
+          ]}
+          wrapper="h2"
+          cursor={false}
+          repeat={Infinity}
+        />
       <Swiper
         className="container certification_containerr"
         modules={[Pagination]}

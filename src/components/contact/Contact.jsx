@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import emailjs from "emailjs-com";
+import { TypeAnimation } from "react-type-animation";
 
 const Contact = () => {
   const [emailIsSent, setEmailIsSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm(
         "service_jxtv4xm",
@@ -23,8 +23,31 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <TypeAnimation
+          sequence={[
+            "Get",
+            2000,
+            "Get In",
+            2000,
+            "Get In Touch",
+            2000,
+          ]}
+          wrapper="h5"
+          cursor={false}
+          repeat={Infinity}
+        />
+
+        <TypeAnimation
+          sequence={[
+            "Contact",
+            2000,
+            "Contact Me",
+            2000,
+          ]}
+          wrapper="h2"
+          cursor={false}
+          repeat={Infinity}
+        />
       <div className="container contact_container">
         <div className="contact_options">
           <article className="contact_option">
@@ -42,7 +65,6 @@ const Contact = () => {
             </a>
           </article>
         </div>
-        {/* END OF CONTACT OPTIONS */}
         {emailIsSent ? (
           <h2 id="contact_sent-message">
             Your Message was successfully sent!

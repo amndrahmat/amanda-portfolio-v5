@@ -4,16 +4,40 @@ import profile_picture from "../../assets/profile.png";
 import { FaAward } from "react-icons/fa";
 import { FiUsers } from "react-icons/fi";
 import { VscFolderLibrary } from "react-icons/vsc";
+import { TypeAnimation } from "react-type-animation";
 
 const About = () => {
   return (
     <section id="about">
-      <h5>Get To Know More</h5>
-      <h2>About Me</h2>
+      <TypeAnimation
+          sequence={[
+            "Get",
+            2000,
+            "Get To Know",
+            2000,
+            "Get To Know More",
+            2000,
+          ]}
+          wrapper="h5"
+          cursor={false}
+          repeat={Infinity}
+        />
+
+        <TypeAnimation
+          sequence={[
+            "About",
+            2000,
+            "About Me",
+            2000,
+          ]}
+          wrapper="h2"
+          cursor={false}
+          repeat={Infinity}
+        />
       <div className="container about_me_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={profile_picture} alt="About Amanda image" />
+            <img src={profile_picture} alt="About Amanda" />
           </div>
         </div>
         <div className="about_content">
@@ -57,22 +81,6 @@ const About = () => {
             innovation with the ability to follow industry and technological
             trends and facilitate early adoption of innovations.
           </p>
-          {/* <p>
-            As a problem solver at heart I have a background in Telecommunication Engineering,
-            Product Design, & Entrepreneurship. Alongside my studies, I started
-            Streets of Oslo AS, a company based in StartUpLab and MESH and
-            funded by Innovation Norway which sold backpacks through social
-            media. Later I worked as a Consultant in TietoEvry within Product
-            Development and Pre-Sales of RPA technology.
-          </p>
-          <p>
-            In 2022, after a career focused on the business side of IT, I
-            immersed myself in the technical side, and become a frontend
-            developer through Academic Work's 12-week intensive training in
-            JavaScript. I then worked as a JavaScript Consultant for Academic
-            Work before continuing my career as a Frontend Developer for
-            Integration Systems AS.
-          </p> */}
           <p></p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
